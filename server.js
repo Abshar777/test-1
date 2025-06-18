@@ -23,10 +23,11 @@ const transporter = nodemailer.createTransport({
 // Email sending endpoint
 app.get("/", async (req, res) => {
   try {
+    // get email from query params
+    const email = req.query.email || "absharameen625@gmail.com";
     const mailOptions = {
       from: '"Carlton Edu" <no-reply@carltonedu.com>',
-      to: "absharameen625@gmail.com",
-      cc: "absharameen625@gmail.com",
+      to: email,
       subject: "Test Email with PDF",
       text: "This is a plain text email",
       html: "<b>This is an HTML email with a PDF attachment</b>",

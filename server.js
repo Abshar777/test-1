@@ -33,7 +33,7 @@ app.get("/", async (req, res) => {
       attachments: [
         {
           filename: "sample.pdf",
-          path: path.join(__dirname, "sample.pdf"), // Ensure this path is correct
+          path: "./sample.pdf",
           contentType: "application/pdf",
         },
       ],
